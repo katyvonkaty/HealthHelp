@@ -1,14 +1,18 @@
 import React from "react";
-import People from "./containers/People"
-import axios from "axios"
+import { BrowserRouter } from "react-router-dom"
+
+import AideHome from "./containers/People/AideHome"
 
 
 class App extends React.Component {
   render(){
     return (
+      <BrowserRouter>
       <div className="App">
-        <People />
+        <AideHome />
       </div>
+      </BrowserRouter>
+
     )
   }
 }

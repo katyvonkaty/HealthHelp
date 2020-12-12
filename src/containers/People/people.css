@@ -1,0 +1,7 @@
+.People ul {
+  list-style:none;
+}
+
+.People li {
+  display: inline-block;
+}
