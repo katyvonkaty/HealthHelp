@@ -7,19 +7,17 @@ class FullPerson extends Component {
         profile: null
     }
 //how is props being past to comp did mount
-    componentDidMount () {
-        axios.get('https://jsonplaceholder.typicode.com/users/' + this.props.id )
-          .then( response => {
-            this.setState({profile:response.data})
-            console.log(response.data);
-          });
-        }
-
-
-    componentDidUpdate() {
+  componentDidMount(){
       console.log(this.props);
+      if (this.props.match.params.id){
+        if ( !this.state.profile || ( this.state.profile && this.state.profile.id !== this.props.id) ) {
+          axios.get("https://jsonplaceholder.typicode.com/users/" + this.props.match.params.id)
+            .then(response => {
+              this.setState({profile: response.data})
+            })
+          }
+        }
     }
-
 
     render () {
         let post = <p style={{ textAlign: 'center' }}> Profile!</p>;

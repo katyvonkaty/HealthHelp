@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from "axios"
 import Aide from './Aide';
 import AideSearch from './AideSearch';
-import AideProfile from './AideProfile';
 import FullPerson from './FullPerson';
 import { Route, NavLink, Switch } from "react-router-dom"
 // import classes from "people.css"
@@ -26,7 +25,6 @@ class AideHome extends Component {
           </header>
             <Switch>
               <Route path="/" exact component= {AideSearch} />
-              <Route path="/:profile" component= {AideProfile} />
               <Route path="/:id" component= {FullPerson} />
             </Switch>
             </div>
