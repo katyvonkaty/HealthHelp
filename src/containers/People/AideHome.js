@@ -24,10 +24,10 @@ class AideHome extends Component {
             </nav>
 
           </header>
-          <Switch>
-              <Route path="/:profile" component= {AideProfile} />
-              <Route path="/:phone" component= {FullPerson} />
+            <Switch>
               <Route path="/" exact component= {AideSearch} />
+              <Route path="/:profile" component= {AideProfile} />
+              <Route path="/:id" component= {FullPerson} />
             </Switch>
             </div>
         );

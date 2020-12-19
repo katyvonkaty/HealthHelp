@@ -2,40 +2,40 @@ import React from "react"
 import FullPerson from './FullPerson';
 import Aide from './Aide';
 import axios from "axios";
-import {Route} from "react-router-dom";
+import {Route, Link} from "react-router-dom";
 
 import { Button } from 'semantic-ui-react'
 
 
 class AideSearch extends React.Component {
-  state = {
-    people: []
-  }
+    state = {
+      people: []
+    }
 
-  onSearchSubmit = async() => {
-    const response = await axios.get("https://randomuser.me/api/?results=5&nat=us")
-    this.setState({people: response.data.results})
-  }
+    onSearchSubmit = async() => {
+      const response = await axios.get("https://jsonplaceholder.typicode.com/users")
+      this.setState({people: response.data})
+      console.log(response.data);
+    }
 
-  // personSelectedHandler = (phone) => {
-  //   this.setState({selectedPerson: phone})
-  // }
-  //phone is synymous with id to identify / differtiate users
+
+    personSelected = (id) => {
+      this.setState({selectedPerson: id})
+    }
 
 
     render() {
       const people = this.state.people.map( person => {
-        return <Aide
-          key={person.id.value}
-          picture= {person.picture.large}
-          firstName= {person.name.first}
-          lastName= {person.name.last}
-          city = {person.location.city}
-          state={person.location.state}
-          zip = {person.location.postcode}
-          cell = {person.cell}
-          // clicked={() => this.personSelectedHandler(person.phone)}
-           />
+        return (
+          <Link to={"/" + person.id}>
+            <Aide
+            name = {person.name}
+            username = {person.username}
+            {...this.props}
+            clicked={() => this.personSelected(person.id)}
+            />
+          </Link>
+        )
       })
 
       return (
@@ -47,7 +47,7 @@ class AideSearch extends React.Component {
             <section className="Posts">
               {people}
             </section>
-            <Route path="/:phone" exact component={FullPerson} />
+            <Route path="/:id" exact component={FullPerson} />
           </div>
 
 
