@@ -2,31 +2,30 @@ import React from "react"
 import FullPerson from './FullPerson';
 import Aide from './Aide';
 import axios from "axios";
-import {Route, Link} from "react-router-dom";
+import {Route} from "react-router-dom";
 
-import { Button, Massive } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 
 
 class AideSearch extends React.Component {
     state = {
-      people: [],
-      photos:[]
+      people: []
+    }
+
+    onSearchSubmit = async() => {
+      const response = await axios.get("https://jsonplaceholder.typicode.com/users")
+      this.setState({people: response.data})
+      console.log(response.data);
     }
 
     // onSearchSubmit = async() => {
-    //   const response = await axios.get("https://jsonplaceholder.typicode.com/users")
-    //   this.setState({people: response.data})
-    //   console.log(response.data);
+    //   const [firstResponse, secondResponse] = await Promise.all ([
+    //     axios.get("https://jsonplaceholder.typicode.com/users"),
+    //     axios.get("https://randomuser.me/api")
+    //   ])
+    //   this.setState({people: firstResponse.data, photos: secondResponse.data.results})
+    //   console.log(secondResponse.data.results);
     // }
-
-    onSearchSubmit = async() => {
-      const [firstResponse, secondResponse] = await Promise.all ([
-        axios.get("https://jsonplaceholder.typicode.com/users"),
-        axios.get("https://randomuser.me/api")
-      ])
-      this.setState({people: firstResponse.data, photos: secondResponse.data.results})
-      console.log(secondResponse.data.results);
-    }
 
 
     personSelected = (id) => {
@@ -58,23 +57,19 @@ render(){
         )
       })
 
-      const photos = this.state.photos.map( photo => {
-        return (
-          <Aide
-          photo = {photo.picture.large}
-           />
-        )
-      })
 
 
       return (
-        <div>
+        <div className="magic">
+        <h1 style={{textAlign:"center"}}> How Does This Magic Work? </h1>
             <Button primary massive
+              style={{display:"block", margin:"0 auto"}}
               onClick={ () => {
               this.onSearchSubmit() }}>
               Search Aides In Your Area </Button>
             <section className="Posts">
-              {photos} {people}
+
+              {people}
 
             </section>
             <Route path="/:id" exact component={FullPerson} />

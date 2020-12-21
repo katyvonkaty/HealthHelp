@@ -15,7 +15,7 @@ class Contact extends Component {
   render() {
     const { value } = this.state
     return (
-      <Container fluid style={{backgroundColor:"#314A3C"}} className="contactForm">
+      <Container fluid style={{backgroundColor:"#314A3C"}} id="contact" className="contactForm">
       <Form className="testing">
       <h1 style={{textAlign:"center"}}> Sign Up for Early Access</h1>
 

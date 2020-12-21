@@ -51,6 +51,11 @@ i.icon.medkit:before {
   color:white;
 }
 
+.magic {
+  height:100%;
+  padding:50px;
+}
+
 .testing{
   width:60% !important;
   margin:0 auto;
@@ -58,6 +63,10 @@ i.icon.medkit:before {
   padding:30px;
   height:50vh;
 }
+
+.ui.basic.blue.button {
+  color: #5B7FCC !important;
+  }
 
 .contactForm .ui.form .field>label, .inline .fields{
   color:white !important;

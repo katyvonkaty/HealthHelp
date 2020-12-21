@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Menu, Button, Icon } from 'semantic-ui-react'
-import { Route, NavLink, Switch } from "react-router-dom"
+import { Route, NavLink, Switch, Link } from "react-router-dom"
 import AideSearch from './AideSearch';
 import Home from './Home';
 
@@ -9,7 +9,6 @@ import FullPerson from './FullPerson';
 
 export default class Navbar extends Component {
   state = {}
-
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
@@ -17,37 +16,36 @@ export default class Navbar extends Component {
 
     return (
       <Menu stackable>
-
         <Menu.Item
-          name='editorials'
-          active={activeItem === 'editorials'}
+          name='home'
+          active={activeItem === 'home'}
           style={{fontWeight:"800"}}
           onClick={this.handleItemClick}
         >
-
-        <Icon name='medkit' /> Caseworker
+            <Icon name='medkit' /> Caseworker
         </Menu.Item>
         <Menu.Item
-          name='reviews'
-          active={activeItem === 'reviews'}
+          name='about'
+          active={activeItem === 'about'}
           onClick={this.handleItemClick}
         >
-            <NavLink to="/:id">
-              About
-            </NavLink>
+           About
         </Menu.Item>
+            
 
         <Menu.Item
-          name='upcomingEvents'
-          active={activeItem === 'upcomingEvents'}
+          name='contact'
+          active={activeItem === 'contact'}
           onClick={this.handleItemClick}
         >
-          Upcoming Events
+         Contact
         </Menu.Item>
 
         <Menu.Item position="right">
            <Button floated="right"> Contact Us </Button>
         </Menu.Item>
+
+
 
       </Menu>
     )

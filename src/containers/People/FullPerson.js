@@ -22,7 +22,7 @@ class FullPerson extends Component {
     }
 
     render () {
-        let post = <p style={{ textAlign: 'center' }}> Profile!</p>;
+        let post = <p style={{ textAlign: 'center' }}> One Sec!</p>;
 
         if(this.props.id){
           post = <p style={{textAlign: "center"}}> Loading </p>
