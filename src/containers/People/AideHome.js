@@ -34,8 +34,3 @@ class AideHome extends Component {
 }
 
 export default AideHome;
-
-
-
-// <Route path="/" exact render={() => <h1> Home </h1>} />
-// <Route path="/" render={() => <h1> Home2 </h1>} />

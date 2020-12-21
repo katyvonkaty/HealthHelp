@@ -2,12 +2,14 @@ import React from 'react'
 import Navbar from "./Navbar"
 import Intro from "./Intro"
 import Contact from "./Contact"
-import { Image } from 'semantic-ui-react'
+import ContainerText from "./ContainerText"
+
+
 
 const Home = (props) => (
   <>
   <Navbar />
-  <Image src='https://images.pexels.com/photos/339620/pexels-photo-339620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' fluid />
+  <ContainerText />
   <Intro />
   <Contact />
   </>

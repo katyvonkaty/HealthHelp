@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Menu, Button, Icon } from 'semantic-ui-react'
 
 export default class Navbar extends Component {
   state = {}
@@ -10,13 +10,14 @@ export default class Navbar extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu>
+      <Menu stackable>
         <Menu.Item
           name='editorials'
           active={activeItem === 'editorials'}
+          style={{fontWeight:"800"}}
           onClick={this.handleItemClick}
         >
-          Editorials
+        <Icon name='medkit' /> Caseworker
         </Menu.Item>
 
         <Menu.Item
@@ -24,7 +25,7 @@ export default class Navbar extends Component {
           active={activeItem === 'reviews'}
           onClick={this.handleItemClick}
         >
-          Reviews
+          About
         </Menu.Item>
 
         <Menu.Item
@@ -34,6 +35,11 @@ export default class Navbar extends Component {
         >
           Upcoming Events
         </Menu.Item>
+
+        <Menu.Item position="right">
+           <Button floated="right"> Contact Us </Button>
+        </Menu.Item>
+
       </Menu>
     )
   }

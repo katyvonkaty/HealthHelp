@@ -12,7 +12,26 @@ h1,h2,h3,h4,h5 {
   border-bottom:1px solid #eee;
 }
 
-.ui.text.container {
+/* .ui.text.container {
   border-bottom:1px solid #eee;
+} */
 
+.header{
+  margin-top:100px !important;
+  text-align:center;
 }
+
+.header p {
+  text-align:center;
+  color: #666;
+  font-weight:400;
+}
+
+button {
+  background-color: #E6BF46 !important;
+  color:white !important;
+}
+
+i.icon.medkit:before {
+ color:  #E6BF46 !important;
+ }
