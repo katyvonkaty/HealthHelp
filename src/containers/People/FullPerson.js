@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Aide from './Aide';
+
 
 
 class FullPerson extends Component {
     state = {
         profile: null
     }
-//how is props being past to comp did mount
+
   componentDidMount(){
       console.log(this.props);
       if (this.props.match.params.id){
@@ -27,7 +29,17 @@ class FullPerson extends Component {
         }
 
         if ( this.state.profile ) {
-          post = <h1>{this.state.profile.name}</h1>
+          post =
+          <Aide
+          name = {this.state.profile.name}
+          username = {this.state.username}
+          email= {this.state.profile.email}
+          street = {this.state.profile.address.street}
+          phone = {this.state.profile.phone}
+          website={this.state.profile.website}
+          companyName={this.state.profile.company.name}
+
+          />
         }
 
         return post;

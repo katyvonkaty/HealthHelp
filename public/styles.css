@@ -1,0 +1,18 @@
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: 'Fira Sans', sans-serif !important;
+}
+
+.ui.items>.item>.content {
+  padding:10px !important;
+  border-bottom:1px solid #eee;
+}
+
+.ui.text.container {
+  border-bottom:1px solid #eee;
+
+}
