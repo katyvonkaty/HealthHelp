@@ -30,21 +30,21 @@ class Contact extends Component {
           />
         </Form.Group>
         <Form.Group inline>
-          <label>Size</label>
+          <label>Role</label>
           <Form.Radio
-            label='Small'
+            label='Caregiver'
             value='sm'
             checked={value === 'sm'}
             onChange={this.handleChange}
           />
           <Form.Radio
-            label='Medium'
+            label='Child'
             value='md'
             checked={value === 'md'}
             onChange={this.handleChange}
           />
           <Form.Radio
-            label='Large'
+            label='Spouse'
             value='lg'
             checked={value === 'lg'}
             onChange={this.handleChange}

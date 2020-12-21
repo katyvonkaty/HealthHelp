@@ -14,7 +14,13 @@ class AideSearch extends React.Component {
 
     onSearchSubmit = async() => {
       const response = await axios.get("https://jsonplaceholder.typicode.com/users")
-      this.setState({people: response.data})
+      const people = response.data.slice(0,5);
+      const updatedPeople = people.map( person => {
+        return {
+          ...person
+        }
+      })
+      this.setState({people: updatedPeople})
       console.log(response.data);
     }
 
@@ -29,8 +35,8 @@ class AideSearch extends React.Component {
 
 
     personSelected = (id) => {
-      // this.setState({selectedPerson: id})
-      this.props.history.push({pathname: "/" + id})
+      this.setState({selectedPerson: id})
+      // this.props.history.push({pathname: "/" + id})
     }
 
 
@@ -63,10 +69,11 @@ render(){
         <div className="magic">
         <h1 style={{textAlign:"center"}}> How Does This Magic Work? </h1>
             <Button primary massive
+              className="buttonSearch"
               style={{display:"block", margin:"0 auto"}}
               onClick={ () => {
               this.onSearchSubmit() }}>
-              Search Aides In Your Area </Button>
+              Search Home Health Workers In Your Area </Button>
             <section className="Posts">
 
               {people}
