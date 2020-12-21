@@ -15,8 +15,10 @@ class Contact extends Component {
   render() {
     const { value } = this.state
     return (
-      <Container>
-      <Form>
+      <Container fluid style={{backgroundColor:"#314A3C"}} className="contactForm">
+      <Form className="testing">
+      <h1 style={{textAlign:"center"}}> Sign Up for Early Access</h1>
+
         <Form.Group widths='equal'>
           <Form.Input fluid label='First name' placeholder='First name' />
           <Form.Input fluid label='Last name' placeholder='Last name' />
@@ -49,7 +51,6 @@ class Contact extends Component {
           />
         </Form.Group>
         <Form.TextArea label='About' placeholder='Tell us more about you...' />
-        <Form.Checkbox label='I agree to the Terms and Conditions' />
         <Form.Button>Submit</Form.Button>
       </Form>
       </Container>

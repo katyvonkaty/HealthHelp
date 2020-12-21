@@ -34,4 +34,35 @@ button {
 
 i.icon.medkit:before {
  color:  #E6BF46 !important;
- }
+}
+
+.secondContainer {
+  background-color: #F9F8F9;
+  height:60vh;
+}
+
+.secondContainer h1 {
+  margin-top:40px !important;
+  font-weight:600;
+}
+
+.contactForm {
+  padding:60px;
+  color:white;
+}
+
+.testing{
+  width:60% !important;
+  margin:0 auto;
+  margin-top:50px;
+  padding:30px;
+  height:50vh;
+}
+
+.contactForm .ui.form .field>label, .inline .fields{
+  color:white !important;
+}
+
+.ui.checkbox input.hidden+label, .ui.form .inline.fields>label {
+  color:white !important;
+}

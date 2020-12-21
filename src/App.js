@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom"
 
-import AideHome from "./containers/People/AideHome"
+import Home from "./containers/People/Home"
 
 
 class App extends React.Component {
@@ -9,7 +9,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
       <div className="App">
-        <AideHome />
+        <Home />
       </div>
       </BrowserRouter>
 
