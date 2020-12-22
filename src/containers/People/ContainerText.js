@@ -2,7 +2,7 @@ import React from 'react'
 import { Container,Button, Header, Grid } from 'semantic-ui-react'
 
 const ContainerText = () => (
-  <Container style={{ height: "60vh" }} stackable  center className="header">
+  <Container style={{ height: "100%" }} stackable  center className="header">
     <Grid verticalAlign='middle' columns={1} centered>
       <Grid.Column>
         <Container text>
@@ -10,7 +10,7 @@ const ContainerText = () => (
           <p>
             Why should finding reliable and quality home health aides be such a challenge? <br /> Sign up to learn more.
           </p>
-          <Grid.Column  style={{ textAlign: "center" }}>
+          <Grid.Column  style={{ textAlign: "center", marginBottom:"190px" }} className="bottom">
             <Button > Talk to us </Button>
           </Grid.Column>
         </Container>
