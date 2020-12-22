@@ -74,7 +74,7 @@ render(){
               onClick={ () => {
               this.onSearchSubmit() }}>
               Search Home Health Workers In Your Area </Button>
-            <section className="Posts">
+            <section className="Posts" stackable>
 
               {people}
 
