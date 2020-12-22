@@ -12,12 +12,9 @@ const SecondContainer = () => (
         <Grid.Column width={3}>
         </Grid.Column>
           <Grid.Column width={10} centered>
-            <h1> Lets just search for home health care at the click of the button, shall we? </h1>
-            <p>  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-              ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-              magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-              ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-              quis enim. Donec pe </p>
+            <h1> Searching for Health Care Efficiently </h1>
+            <p> How often do you need to find reliable health care? We all know how hectic life can be; between navigatiting transportation
+            issues, scheduling challenges and simple easy communication. Would it make your life easier to log on and search within your area for an extra hand when necessary? We are hoping to simply the process. </p>
               <img alt="test" style={{marginBottom:"50px"}} src="https://cdn.dribbble.com/users/104062/screenshots/7859787/media/939be6bdd89076dbcf9206511dc17798.png?compress=1&resize=1000x350" />
           </Grid.Column>
         </Grid.Row>

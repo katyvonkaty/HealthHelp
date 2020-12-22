@@ -11,7 +11,7 @@ const ContainerText = () => (
             Why should finding reliable and quality home health aides be such a challenge? <br /> Sign up to learn more.
           </p>
           <Grid.Column  style={{ textAlign: "center", marginBottom:"190px" }} className="bottom">
-            <Button ><a href="mailto:healthhelpnyc@gmail.com"> Talk to us </a></Button>
+            <Button ><a href="mailto:healthhelpnyc@gmail.com"> Talk to us </a> </Button>
           </Grid.Column>
         </Container>
       </Grid.Column>
