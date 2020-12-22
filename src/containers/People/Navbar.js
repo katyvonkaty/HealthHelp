@@ -22,7 +22,7 @@ export default class Navbar extends Component {
           style={{fontWeight:"800"}}
           onClick={this.handleItemClick}
         >
-            <Icon name='medkit' /> Caseworker
+            <Icon name='medkit' /> HealthHelp
         </Menu.Item>
         <Menu.Item
           name='about'
@@ -31,18 +31,21 @@ export default class Navbar extends Component {
         >
            About
         </Menu.Item>
-            
+
 
         <Menu.Item
           name='contact'
           active={activeItem === 'contact'}
           onClick={this.handleItemClick}
-        >
-         Contact
+        > How It Works
         </Menu.Item>
 
         <Menu.Item position="right">
-           <Button floated="right"> Contact Us </Button>
+           <Button floated="right">
+             <a href="mailto:healthhelpnyc@gmail.com">
+             Contact Us
+            </a>
+          </Button>
         </Menu.Item>
 
 

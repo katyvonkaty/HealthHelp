@@ -90,8 +90,9 @@ i.huge.icon {
   background-color: #314A3C
 }
 
-
-
+button a {
+  color:white !important;
+}
 @media (max-width:760px){
   .header{
     margin-top: 10px !important;

@@ -51,7 +51,7 @@ class Contact extends Component {
           />
         </Form.Group>
         <Form.TextArea label='About' placeholder='Tell us more about you...' />
-        <Form.Button>Submit</Form.Button>
+        <Form.Button><a href="mailto:healthhelpnyc@gmail.com">Submit </a></Form.Button>
       </Form>
       </Container>
     )
