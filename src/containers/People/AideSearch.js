@@ -10,7 +10,7 @@ import { Button } from 'semantic-ui-react'
 class AideSearch extends React.Component {
     state = {
       people: [],
-      displayPeople: false
+      showing: true
     }
 
     onSearchSubmit = async() => {
@@ -25,22 +25,16 @@ class AideSearch extends React.Component {
       console.log(response.data);
     }
 
-    ToggleButton() {
-      this.setState( (currentState) => ({
-        displayPeople: !currentState.displayPeople
-      })
-    )}
-
 
     personSelected = (id) => {
       // this.setState({selectedPerson: id})
-      this.props.history.push({pathname: "/" + id})
+      this.props.history.push( "/" + id)
     }
 
 
 
 render(){
-
+    const {showing} = this.state
       const people = this.state.people.map( person => {
         return (
           // <Link to={"/" + person.id}>
@@ -67,14 +61,15 @@ render(){
             <Button primary massive
               className="buttonSearch"
               style={{display:"block", margin:"0 auto"}}
-              onClick={ () =>
-                {this.onSearchSubmit(); this.ToggleButton() }
+              onClick=
+              { () =>
+                {this.setState({ showing: !showing, people:[] }); this.onSearchSubmit() }
               }>  Search Home Health Workers In Your Area
+
             </Button>
 
             <section className="Posts" stackable>
-              {people}
-
+              { showing ? null : people }
             </section>
             <Route path="/:id" exact component={FullPerson} />
         </div>
