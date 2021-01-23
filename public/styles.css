@@ -1,89 +1,84 @@
-
 body {
   font-family: 'Montserrat', sans-serif !important;
 }
 
-h1,h2,h3,h4,h5 {
+h1, h2, h3, h4, h5 {
   font-family: 'Fira Sans', sans-serif !important;
 }
 
 .ui.items>.item>.content {
-  padding:10px !important;
-  border-bottom:1px solid #eee;
+  padding: 10px !important;
+  border-bottom: 1px solid #eee;
 }
 
-/* .ui.text.container {
-  border-bottom:1px solid #eee;
-} */
-
-.header{
-  margin-top:100px !important;
-  text-align:center;
+.header {
+  margin-top: 100px !important;
+  text-align: center;
 }
 
 .header p {
-  text-align:center;
+  text-align: center;
   color: #666;
-  font-weight:400;
+  font-weight: 400;
 }
 
 button {
   background-color: #E6BF46 !important;
-  color:white !important;
+  color: white !important;
 }
 
 i.icon.medkit:before {
- color:  #E6BF46 !important;
+  color: #E6BF46 !important;
 }
 
 .secondContainer {
   background-color: #F9F8F9;
-  height:100%;
-  padding:10px;
+  height: 100%;
+  padding: 10px;
 }
 
 .secondContainer h1 {
-  margin-top:40px !important;
-  font-weight:600;
+  margin-top: 40px !important;
+  font-weight: 600;
 }
 
 .contactForm {
-  padding:60px;
-  color:white;
+  padding: 60px;
+  color: white;
 }
 
 .magic {
-  height:100%;
-  padding:100px;
+  height: 100%;
+  padding: 100px;
 }
 
-.testing{
-  width:80% !important;
-  margin:0 auto;
-  margin-top:50px;
-  padding:30px;
-height:100%;
+.testing {
+  width: 80% !important;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 30px;
+  height: 100%;
 }
 
 i.huge.icon {
-  margin-top:110px !important;
+  margin-top: 110px !important;
   color: #314A3C;
 }
 
 .ui.basic.blue.button, .user .circle .huge .icon {
-  margin-top:110px !important;
+  margin-top: 110px !important;
 }
 
 .ui.basic.blue.button {
   color: #5B7FCC !important;
-  }
+}
 
-.contactForm .ui.form .field>label, .inline .fields{
-  color:white !important;
+.contactForm .ui.form .field>label, .inline .fields {
+  color: white !important;
 }
 
 .ui.checkbox input.hidden+label, .ui.form .inline.fields>label {
-  color:white !important;
+  color: white !important;
 }
 
 #contact {
@@ -91,25 +86,25 @@ i.huge.icon {
 }
 
 button a {
-  color:white !important;
+  color: white !important;
 }
 
 .ui.menu .item a {
-  color:black;
+  color: black;
 }
 
 .secondContainer img {
-  padding:40px;
+  padding: 40px;
 }
 
-@media (max-width:760px){
-  .header{
+@media (max-width:760px) {
+  .header {
     margin-top: 10px !important;
   }
 
   .ui.basic.blue.button, .user .circle .huge .icon {
-    margin-top:10px !important;
-    float:left !important;
+    margin-top: 10px !important;
+    float: left !important;
   }
 
   i.huge.icon {
@@ -117,7 +112,7 @@ button a {
   }
 
   .testing {
-    width:100% !important;
+    width: 100% !important;
   }
 
   .
