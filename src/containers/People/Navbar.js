@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Button, Icon } from 'semantic-ui-react'
+import { Menu, Button, Icon, Sticky } from 'semantic-ui-react'
 import AideSearch from './AideSearch';
 import Home from './Home';
 import { Link } from 'react-scroll'
@@ -17,8 +17,8 @@ export default class Navbar extends Component {
     const { activeItem } = this.state
 
     return (
-
-      <Menu stackable>
+<Sticky>
+      <Menu stackable >
         <Menu.Item
           name='home'
           active={activeItem === 'home'}
@@ -85,6 +85,7 @@ export default class Navbar extends Component {
 
 
       </Menu>
+      </Sticky>
 
     )
   }
