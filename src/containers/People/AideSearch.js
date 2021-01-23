@@ -28,7 +28,7 @@ class AideSearch extends React.Component {
 
     personSelected = (id) => {
       // this.setState({selectedPerson: id})
-      this.props.history.push( "/" + id)
+      this.props.history.push( "/profile/" + id)
     }
 
 
@@ -57,20 +57,20 @@ render(){
 
       return (
         <div className="magic">
-        <h1 style={{textAlign:"center"}}> How Does This Magic Work? </h1>
-            <Button primary massive
-              className="buttonSearch"
-              style={{display:"block", margin:"0 auto"}}
-              onClick=
-              { () =>
-                {this.setState({ showing: !showing, people:[] }); this.onSearchSubmit() }
-              }>  Search Home Health Workers In Your Area
+          <h1 style={{textAlign:"center"}}> How Does This Magic Work? </h1>
+              <Button primary massive
+                className="buttonSearch"
+                style={{display:"block", margin:"0 auto"}}
+                onClick=
+                { () =>
+                  {this.setState({ showing: !showing }); this.onSearchSubmit() }
+                }>  Search Home Health Workers In Your Area
 
-            </Button>
+              </Button>
 
-            <section className="Posts" stackable>
-              { showing ? null : people }
-            </section>
+              <section className="Posts" stackable>
+                { showing ? null : people }
+              </section>
             <Route path="/:id" exact component={FullPerson} />
         </div>
       )
