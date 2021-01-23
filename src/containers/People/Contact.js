@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Form, Container } from 'semantic-ui-react'
 
+
 const options = [
   { key: 'm', text: 'Male', value: 'male' },
   { key: 'f', text: 'Female', value: 'female' },
@@ -15,6 +16,9 @@ class Contact extends Component {
   render() {
     const { value } = this.state
     return (
+       // wrap your content in the Element from react-scroll
+
+
       <Container fluid  id="contact" className="contactForm">
       <Form className="testing">
       <h1 style={{textAlign:"center"}}> Sign Up for Early Access</h1>
@@ -54,6 +58,8 @@ class Contact extends Component {
         <Form.Button><a href="mailto:healthhelpnyc@gmail.com">Submit </a></Form.Button>
       </Form>
       </Container>
+
+
     )
   }
 }

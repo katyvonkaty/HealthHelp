@@ -56,15 +56,17 @@ render(){
       })
 
       return (
-        <div className="magic">
-          <h1 style={{textAlign:"center"}}> How Does This Magic Work? </h1>
+        <div className="magic" id="magic">
+          <h1 style={{textAlign:"center"}}> Get Home Health Help Today</h1>
+          <h4 style={{textAlign:"center"}}> Click the button to see a list of eligible healthcare aides in your area.</h4>
+
               <Button primary massive
                 className="buttonSearch"
                 style={{display:"block", margin:"0 auto"}}
                 onClick=
                 { () =>
                   {this.setState({ showing: !showing }); this.onSearchSubmit() }
-                }>  Search Home Health Workers In Your Area
+                }>  Search Health Help
 
               </Button>
 
