@@ -93,6 +93,11 @@ i.huge.icon {
 button a {
   color:white !important;
 }
+
+.secondContainer img {
+  padding:40px;
+}
+
 @media (max-width:760px){
   .header{
     margin-top: 10px !important;

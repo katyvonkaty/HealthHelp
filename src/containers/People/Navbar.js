@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Menu, Button, Icon } from 'semantic-ui-react'
 import AideSearch from './AideSearch';
 import Home from './Home';
-import {Link} from 'react-scroll'
+import { Link } from 'react-scroll'
 import FullPerson from './FullPerson';
 
 // const ScrollLink = Scroll.ScrollLink
