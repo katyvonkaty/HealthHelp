@@ -2,7 +2,7 @@ import React from 'react'
 import { Container,Button, Header, Grid } from 'semantic-ui-react'
 
 const ContainerText = () => (
-  <Container style={{ height: "100%" }} stackable  center className="header">
+  <Container style={{ height: "100%" }} stackable id="header" center className="header">
     <Grid verticalAlign='middle' columns={1} centered>
       <Grid.Column>
         <Container text>

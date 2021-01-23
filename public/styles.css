@@ -94,6 +94,10 @@ button a {
   color:white !important;
 }
 
+.ui.menu .item a {
+  color:black;
+}
+
 .secondContainer img {
   padding:40px;
 }
