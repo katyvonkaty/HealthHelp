@@ -20,7 +20,6 @@ class AideSearch extends React.Component {
         }
       }
     );
-    console.log(response.data.data);
     const people = response.data.data
     const updatedPeople = people.map((person) => {
       return {
@@ -32,7 +31,6 @@ class AideSearch extends React.Component {
   };
 
   personSelected = (id) => {
-    this.setState({selectedPerson: id})
     this.props.history.push("/profile/" + id);
   };
 
