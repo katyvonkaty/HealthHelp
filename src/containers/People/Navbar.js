@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Menu, Button, Icon, Sticky } from "semantic-ui-react";
-import AideSearch from "./AideSearch";
-import Home from "./Home";
+
 import { Link } from "react-scroll";
-import FullPerson from "./FullPerson";
 
 // const ScrollLink = Scroll.ScrollLink
 
@@ -16,7 +14,7 @@ export default class Navbar extends Component {
 
     return (
       <Sticky>
-        <Menu stackable>
+        <Menu attached='top'stackable>
           <Menu.Item
             name="home"
             active={activeItem === "home"}

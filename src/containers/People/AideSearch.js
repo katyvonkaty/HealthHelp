@@ -2,7 +2,7 @@ import React from "react";
 import FullPerson from "./FullPerson";
 import Aide from "./Aide";
 import axios from "axios";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 
 import { Button } from "semantic-ui-react";
 
@@ -14,9 +14,14 @@ class AideSearch extends React.Component {
 
   onSearchSubmit = async () => {
     const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/users"
+      "https://dummyapi.io/data/api/user?limit=5", {
+        headers: {
+          "app-id": "600d9cabc9d5e51f4f50c151"
+        }
+      }
     );
-    const people = response.data.slice(0, 5);
+    console.log(response.data.data);
+    const people = response.data.data
     const updatedPeople = people.map((person) => {
       return {
         ...person,
@@ -27,7 +32,7 @@ class AideSearch extends React.Component {
   };
 
   personSelected = (id) => {
-    // this.setState({selectedPerson: id})
+    this.setState({selectedPerson: id})
     this.props.history.push("/profile/" + id);
   };
 
@@ -35,21 +40,16 @@ class AideSearch extends React.Component {
     const { showing } = this.state;
     const people = this.state.people.map((person) => {
       return (
-        // <Link to={"/" + person.id}>
+        <Link to={"/" + person.id}>
         <Aide
-          name={person.name}
-          username={person.username}
+          firstName={person.firstName}
+          lastName={person.lastName}
           email={person.email}
-          street={person.address.street}
-          city={person.address.city}
-          zip={person.address.zip}
-          phone={person.phone}
-          website={person.website}
-          companyName={person.company.name}
+          picture={person.picture}
           {...this.props}
           clicked={() => this.personSelected(person.id)}
         />
-        // </Link>
+        </Link>
       );
     });
 

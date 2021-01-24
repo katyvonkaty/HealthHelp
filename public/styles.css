@@ -11,9 +11,11 @@ h1, h2, h3, h4, h5 {
   border-bottom: 1px solid #eee;
 }
 
-.header {
-  margin-top: 100px !important;
-  text-align: center;
+.ui.header {
+  margin-top:90px !important;
+}
+.ui header {
+  margin-top:90px;
 }
 
 .header p {
@@ -66,8 +68,10 @@ i.huge.icon {
 }
 
 .ui.basic.blue.button, .user .circle .huge .icon {
-  margin-top: 110px !important;
+  margin-top: -20px !important;
 }
+
+
 
 .ui.basic.blue.button {
   color: #5B7FCC !important;
@@ -93,6 +97,19 @@ button a {
   color: black;
 }
 
+#magic img {
+  height: 150px;
+  width: 150px;
+  float: left;
+  margin-right: 30px;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+#magic .header {
+  margin-top:30px;
+}
+
 .secondContainer img {
   padding: 40px;
 }
@@ -103,7 +120,7 @@ button a {
   }
 
   .ui.basic.blue.button, .user .circle .huge .icon {
-    margin-top: 10px !important;
+    margin-top: -10px !important;
     float: left !important;
   }
 
