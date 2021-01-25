@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Contact from "./Contact";
 import ContainerText from "./ContainerText";
 import SecondContainer from "./SecondContainer";
+
 import AideSearch from "./AideSearch";
 
 const Home = (props) => (

@@ -31,23 +31,24 @@ class AideSearch extends React.Component {
   };
 
   personSelected = (id) => {
-    this.props.history.push("/profile/" + id);
+    // this.setState({selectedPersonId: id})
+    this.props.history.push({pathname:"/" + id});
   };
 
   render() {
     const { showing } = this.state;
     const people = this.state.people.map((person) => {
       return (
-        <Link to={"/" + person.id}>
-        <Aide
-          firstName={person.firstName}
-          lastName={person.lastName}
-          email={person.email}
-          picture={person.picture}
-          {...this.props}
-          clicked={() => this.personSelected(person.id)}
-        />
-        </Link>
+        // <Link to={"/" + person.id} key={person.id}>
+          <Aide
+            firstName={person.firstName}
+            lastName={person.lastName}
+            email={person.email}
+            picture={person.picture}
+            {...this.props}
+            clicked={() => this.personSelected(person.id)}
+          />
+        // </Link>
       );
     });
 

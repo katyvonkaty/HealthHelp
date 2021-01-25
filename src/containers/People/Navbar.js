@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Menu, Button, Icon, Sticky } from "semantic-ui-react";
-
 import { Link } from "react-scroll";
+import { Route, Switch } from "react-router-dom"
 
 // const ScrollLink = Scroll.ScrollLink
 
@@ -68,7 +68,9 @@ export default class Navbar extends Component {
               duration={500}
             >
               How It Works
+
             </Link>
+
           </Menu.Item>
 
           <Menu.Item position="right">

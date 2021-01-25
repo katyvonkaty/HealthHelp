@@ -6,19 +6,20 @@ import Aide from './Aide';
 
 class FullPerson extends Component {
     state = {
-        profile: null
+        profile: []
     }
 
   componentDidMount(){
       console.log(this.props);
       if (this.props.match.params.id){
         if ( !this.state.profile || ( this.state.profile && this.state.profile.id !== this.props.id) ) {
-          axios.get("https://dummyapi.io/data/api/user?limit=5", {
+          axios.get("https://dummyapi.io/data/api/user/", {
             headers: {
               "app-id": "600d9cabc9d5e51f4f50c151"
             }} + this.props.match.params.id)
             .then(response => {
-              this.setState({profile: response.data})
+              this.setState({profile: response.data.data})
+              console.log(response.data.data);
             })
           }
         }
@@ -32,14 +33,14 @@ class FullPerson extends Component {
         }
 
         if ( this.state.profile ) {
+          console.log(this.state.profile);
+
           post =
           <Aide
-          firstName = {this.state.profile.firstName}
-          lastName = {this.state.lastName}
-          email= {this.state.profile.email}
-          picture = {this.state.profile.picture}
-
-
+            firstName = {this.state.profile.firstName}
+            lastName = {this.state.lastName}
+            email= {this.state.profile.email}
+            picture = {this.state.profile.picture}
           />
         }
 
