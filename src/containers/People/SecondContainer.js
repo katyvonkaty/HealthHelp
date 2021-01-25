@@ -23,7 +23,7 @@ class SecondContainer extends React.Component {
             <Grid.Row>
               <Grid.Column width={3}></Grid.Column>
               <Grid.Column width={10} centered>
-                <h1> Searching for Health Care Efficiently </h1>
+                <h2> Searching for Health Care Efficiently </h2>
                 <p>
                   {" "}
                   How often do you need to find reliable health care? We all know

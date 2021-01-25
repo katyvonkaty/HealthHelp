@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import axios from "axios";
 
-axios.defaults.baseUrl= "https://randomuser.me/api/"
+axios.defaults.baseUrl= "https://dummyapi.io/data/api/user/"
 
 axios.interceptors.request.use( request => {
   console.log(request);

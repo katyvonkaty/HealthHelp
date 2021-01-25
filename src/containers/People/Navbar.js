@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { Menu, Button, Icon, Sticky } from "semantic-ui-react";
 import { Link } from "react-scroll";
 import { Route, Switch } from "react-router-dom"
-
+import AideSearch from "./AideSearch"
+import FullPerson from "./FullPerson"
+import AideHome from "./AideHome"
 // const ScrollLink = Scroll.ScrollLink
 
 export default class Navbar extends Component {
@@ -30,6 +32,7 @@ export default class Navbar extends Component {
               offset={-70}
               duration={500}
             >
+
               {" "}
               <Icon name="medkit" /> HealthHelp
             </Link>
@@ -89,8 +92,19 @@ export default class Navbar extends Component {
               </Link>
             </Button>
           </Menu.Item>
+
+
+       <Switch>
+           <Route path="/:id" component={FullPerson} />
+       </Switch>
+
         </Menu>
       </Sticky>
+
+
+
     );
+
+
   }
 }
