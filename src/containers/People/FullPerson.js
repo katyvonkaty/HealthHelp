@@ -24,18 +24,10 @@ class FullPerson extends Component {
         !this.state.profile ||
         (this.state.profile && this.state.profile.id !== +this.props.match.params.id)
       ) {
-        axios
-          .get(
-            "https://dummyapi.io/data/api/user/",
-            {
-              headers: {
-                "app-id": "600d9cabc9d5e51f4f50c151",
-              },
-            } + this.props.match.params.id
-          )
+      axios.get( '/users/' + this.props.match.params.id )
           .then((response) => {
-            this.setState({ profile: response.data.data });
-            console.log(response.data.data);
+            this.setState({ profile: response.data });
+            console.log(response.data);
           });
       }
     }

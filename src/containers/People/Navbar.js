@@ -24,7 +24,7 @@ export default class Navbar extends Component {
             onClick={this.handleItemClick}
           >
             <Link
-              to="header"
+              to="/"
               activeClass="active"
               className="nav-link"
               spy={true}
@@ -92,11 +92,6 @@ export default class Navbar extends Component {
               </Link>
             </Button>
           </Menu.Item>
-
-
-       <Switch>
-           <Route path="/:id" component={FullPerson} />
-       </Switch>
 
         </Menu>
       </Sticky>

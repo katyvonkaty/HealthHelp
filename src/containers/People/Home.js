@@ -13,6 +13,7 @@ const Home = (props) => (
     <SecondContainer />
     <AideSearch />
     <Contact />
+
   </>
 );
 

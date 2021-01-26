@@ -13,28 +13,20 @@ class AideSearch extends React.Component {
     showing: true,
   };
 
-  componentDidMount() {
-    console.log(this.props);
-      axios.get(
-      "https://dummyapi.io/data/api/user?limit=5", {
-        headers: {
-          "app-id": "600d9cabc9d5e51f4f50c151"
-        }
-      }
-    )
-    .then( response => {
-      const people = response.data.data;
-      const updatedPeople = people.map((person) => {
-        return {
-          ...person,
-        };
-      });
-      this.setState({ people: updatedPeople, showing:false });
-      })
-      .catch( error => {
-        console.log(error);
-      })
+  onSearchSubmit = async () => {
+    const response = await axios.get( '/users/' )
+    let people = response.data
+    people = people.slice(0,4)
+    const updatedPeople = people.map((person) => {
+      return {
+        ...person,
+      };
+    });
+    this.setState({ people: updatedPeople });
+    console.log(response.data);
   };
+
+
 
   personSelected = (id) => {
     console.log(this.props);
@@ -47,13 +39,13 @@ class AideSearch extends React.Component {
     const { showing } = this.state;
     const people = this.state.people.map((person) => {
       return (
-        <Link to={"/" + person.id} >
+        <Link to={"/profile/" + person.id} >
           <Aide
             key={person.id}
-            firstName={person.firstName}
-            lastName={person.lastName}
+            name={person.name}
             email={person.email}
-            picture={person.picture}
+            phone={person.phone}
+            website={person.website}
             {...this.props}
             clicked={() => this.personSelected(person.id)}
           />
@@ -69,6 +61,20 @@ class AideSearch extends React.Component {
           Click the button to see a list of eligible healthcare aides in your
           area.
         </h4>
+
+        <Button
+           primary
+           massive
+           className="buttonSearch"
+           style={{ display: "block", margin: "0 auto" }}
+           onClick={() => {
+             this.onSearchSubmit()
+             this.setState({ showing: !showing });
+           }}
+         >
+           {" "}
+           Search Health Help
+         </Button>
 
 
         <section className="Posts" stackable>
@@ -171,3 +177,21 @@ export default AideSearch;
 // }
 //
 // export default AideSearch;
+
+
+// componentDidMount() {
+//   console.log(this.props);
+//   axios.get( '/users/' )
+//   .then( response => {
+//     const people = response.data;
+//     const updatedPeople = people.map((person) => {
+//       return {
+//         ...person,
+//       };
+//     });
+//     this.setState({ people: updatedPeople, showing:false });
+//     })
+//     .catch( error => {
+//       console.log(error);
+//     })
+// };
