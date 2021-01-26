@@ -1,8 +1,7 @@
-
-
 import React from "react";
 import FullPerson from "./FullPerson";
 import Aide from "./Aide";
+
 import axios from "axios";
 import { Route, Link } from "react-router-dom";
 import { Button } from "semantic-ui-react";
@@ -29,7 +28,7 @@ class AideSearch extends React.Component {
 
 
   personSelected = (id) => {
-    console.log(this.props);
+    console.log(this.id);
     this.props.history.push({pathname: '/' + id});
   };
 
@@ -37,17 +36,16 @@ class AideSearch extends React.Component {
     const { showing } = this.state;
     const people = this.state.people.map((person) => {
       return (
-        // <Link to={"/" + person.id}>
+        <Link to={"/profile/" + person.id}>
           <Aide
             key={person.id}
             name={person.name}
             email={person.email}
             phone={person.phone}
             website={person.website}
-            {...this.props}
-            clicked={() => this.personSelected(person.id)}
+
           />
-        // </Link>
+        </Link>
       );
     });
 
@@ -79,7 +77,7 @@ class AideSearch extends React.Component {
         {showing ? null : people}
 
         </section>
-        <Route path={'/:id'} exact component={FullPerson} />
+
 
       </div>
     );

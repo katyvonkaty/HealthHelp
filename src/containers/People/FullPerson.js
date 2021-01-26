@@ -45,10 +45,11 @@ class FullPerson extends Component {
 
       post = (
         <Aide
-          firstName={this.state.profile.firstName}
-          lastName={this.state.lastName}
+          key={this.state.profile.id}
+          name={this.state.profile.name}
           email={this.state.profile.email}
-          picture={this.state.profile.picture}
+          phone={this.state.profile.phone}
+          website={this.state.profile.website}
         />
       );
     }

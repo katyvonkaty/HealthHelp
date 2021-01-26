@@ -3,6 +3,8 @@ import { Menu, Button, Icon, Sticky } from "semantic-ui-react";
 import { Link } from "react-scroll";
 import { Route, Switch } from "react-router-dom"
 import AideSearch from "./AideSearch"
+import Profile from "./Profile"
+
 import FullPerson from "./FullPerson"
 import AideHome from "./AideHome"
 // const ScrollLink = Scroll.ScrollLink
@@ -92,6 +94,9 @@ export default class Navbar extends Component {
               </Link>
             </Button>
           </Menu.Item>
+
+          <Route path="/profile/" component={Profile} />
+
 
         </Menu>
       </Sticky>
