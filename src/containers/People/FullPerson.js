@@ -36,9 +36,9 @@ class FullPerson extends Component {
   render() {
     let post = null;
 
-    if (this.props.match.params.id) {
-      post = <p style={{ textAlign: "center" }}> Loading </p>;
-    }
+    // if (this.props.match.params.id) {
+    //   post = <p style={{ textAlign: "center" }}> Loading </p>;
+    // }
 
     if (this.state.profile) {
       console.log(this.state.profile);

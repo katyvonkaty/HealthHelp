@@ -24,7 +24,7 @@ export default class Navbar extends Component {
             onClick={this.handleItemClick}
           >
             <Link
-              to="/"
+              to="header"
               activeClass="active"
               className="nav-link"
               spy={true}

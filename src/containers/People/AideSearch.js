@@ -31,15 +31,13 @@ class AideSearch extends React.Component {
   personSelected = (id) => {
     console.log(this.props);
     this.props.history.push({pathname: '/' + id});
-
-    // this.props.history.push({pathname:"/" + id});
   };
 
   render() {
     const { showing } = this.state;
     const people = this.state.people.map((person) => {
       return (
-        <Link to={"/profile/" + person.id} >
+        // <Link to={"/" + person.id}>
           <Aide
             key={person.id}
             name={person.name}
@@ -49,7 +47,7 @@ class AideSearch extends React.Component {
             {...this.props}
             clicked={() => this.personSelected(person.id)}
           />
-        </Link>
+        // </Link>
       );
     });
 
