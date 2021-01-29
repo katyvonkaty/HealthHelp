@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./containers/People/Home";
+import Navbar from "./containers/People/Navbar";
+
 import Profile from "./containers/People/Profile";
 
 class App extends React.Component {

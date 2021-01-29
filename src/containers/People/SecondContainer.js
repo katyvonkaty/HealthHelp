@@ -26,11 +26,8 @@ class SecondContainer extends React.Component {
                 <h2> Searching for Health Care Efficiently </h2>
                 <p>
                   {" "}
-                  How often do you need to find reliable health care? We all know
-                  how hectic life can be; between navigatiting transportation
-                  issues, scheduling challenges and simple easy communication. Would
-                  it make your life easier to log on and search within your area for
-                  an extra hand when necessary? We are hoping to simply the process.{" "}
+
+  	               The device benefits from three scientific breakthroughs. First, the shrinking of the size of pixels on display screens to almost the size of the wavelength of light. It can detect small changes in the body and beam them back at high resolution.{" "}
                 </p>
                 <Sticky context={this.contextRef} pushing >
                 <img src={product} style={{width:"100%"}} />

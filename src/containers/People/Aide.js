@@ -7,7 +7,7 @@ const Aide = (props) => (
     <Item.Group>
       <Item>
         <Item.Content>
-          <Image src="https://picsum.photos/seed/picsum/200/300" />
+          <Image src="" />
           <Item.Header>
             <h1> {props.name}</h1>
             <h3> {props.phone}</h3>{" "}

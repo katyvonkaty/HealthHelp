@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { Menu, Button, Icon, Sticky } from "semantic-ui-react";
+import { Menu, Button, Sticky } from "semantic-ui-react";
 import { Link } from "react-scroll";
 import { Route, Switch } from "react-router-dom"
 import AideSearch from "./AideSearch"
 import Profile from "./Profile"
-
+import logo from "../../assets/images/logo.png"
 import FullPerson from "./FullPerson"
-import AideHome from "./AideHome"
 // const ScrollLink = Scroll.ScrollLink
 
 export default class Navbar extends Component {
@@ -18,27 +17,8 @@ export default class Navbar extends Component {
 
     return (
       <Sticky>
-        <Menu attached='top'stackable>
-          <Menu.Item
-            name="home"
-            active={activeItem === "home"}
-            style={{ fontWeight: "800" }}
-            onClick={this.handleItemClick}
-          >
-            <Link
-              to="header"
-              activeClass="active"
-              className="nav-link"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
+        <Menu attached='top'stackable fluid widths={5}>
 
-              {" "}
-              <Icon name="medkit" /> HealthHelp
-            </Link>
-          </Menu.Item>
 
           <Menu.Item
             name="about"
@@ -77,8 +57,32 @@ export default class Navbar extends Component {
             </Link>
 
           </Menu.Item>
+          <Menu.Item>
 
-          <Menu.Item position="right">
+          <img src= {logo} alt="logo" className="logo" />
+            </Menu.Item>
+
+            <Menu.Item
+              name="contact"
+              active={activeItem === "contact"}
+              onClick={this.handleItemClick}
+            >
+              <Link
+                to="magic"
+                activeClass="active"
+                className="nav-link"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                How It Works
+
+              </Link>
+
+            </Menu.Item>
+
+          <Menu.Item>
             <Button floated="right">
               <Link
                 href="#contact"

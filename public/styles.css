@@ -4,7 +4,14 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: 'Fira Sans', sans-serif !important;
+
 }
+
+h1,h2 {
+  color:#002375 !important;
+}
+
+
 
 .ui.items>.item>.content {
   padding: 10px !important;
@@ -13,9 +20,25 @@ h1, h2, h3, h4, h5 {
 
 .ui.header {
   margin-top:90px !important;
+  color:002375 !important;
 }
 .ui header {
   margin-top:90px;
+    color:002375 !important;
+}
+
+.logo {
+  width:90% !important;
+  margin-right:20px;
+  padding:20px;
+}
+
+.App {
+  background-color:#f3f6fb
+}
+
+.ui.attached.menu:not(.tabular) {
+background-color: #f3f6fb;
 }
 
 h2 {
@@ -31,7 +54,7 @@ h2 {
 }
 
 button {
-  background-color: #E6BF46 !important;
+  background-color: #ffdc00 !important;
   color: white !important;
 }
 
@@ -40,7 +63,7 @@ i.icon.medkit:before {
 }
 
 .secondContainer {
-  background-color: #F9F8F9;
+  background-color: #fff;
   height: 100%;
   padding: 10px;
 }

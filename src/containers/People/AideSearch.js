@@ -10,6 +10,7 @@ class AideSearch extends React.Component {
   state = {
     people: [],
     showing: true,
+    images: []
   };
 
   onSearchSubmit = async () => {
@@ -25,6 +26,20 @@ class AideSearch extends React.Component {
     console.log(response.data);
   };
 
+  onSearchSubmitTwo = async() => {
+    const response = await axios.get("https://api.generated.photos/api/v1/faces?api_key=vIlzn11TdFjRGqXAL1x0VA")
+    console.log(response.data.faces);
+    let images = response.data.faces
+    images = images.slice(0,4)
+    const updatedImages  = images.map( (image) => {
+      return {
+        ...image
+      }
+    })
+    this.setState({images: updatedImages})
+console.log(images);
+  }
+
 
 
   personSelected = (id) => {
@@ -36,18 +51,47 @@ class AideSearch extends React.Component {
     const { showing } = this.state;
     const people = this.state.people.map((person) => {
       return (
-        <Link to={"/profile/" + person.id}>
-          <Aide
-            key={person.id}
-            name={person.name}
-            email={person.email}
-            phone={person.phone}
-            website={person.website}
+        <p> {person.name} </p>
+      )
+      {this.state.images.map( (image) => {
+        return(
+          <div>
+          <p>  {image.id} </p>
+            </div>
+        )
+      })}
 
-          />
-        </Link>
-      );
     });
+
+    // made some progress hitting both loops at the same time but still super confused
+
+ //    const { showing } = this.state;
+ // const people = this.state.people.map((person) => {
+ //   return (
+ //     <Link to={"/profile/" + person.id}>
+ //       <Aide
+ //         key={person.id}
+ //         name={person.name}
+ //         email={person.email}
+ //         phone={person.phone}
+ //         website={person.website}
+ //
+ //       />
+ //     </Link>
+ //   );
+ // });
+ //
+
+
+    const images = this.state.images.map ((image) => {
+      return (
+
+        <div>
+        <p> {image.id} </p>
+        <p> {image.meta.gender} </p>
+        </div>
+      )
+    })
 
     return (
       <div className="magic" id="magic">
@@ -65,6 +109,7 @@ class AideSearch extends React.Component {
            style={{ display: "block", margin: "0 auto" }}
            onClick={() => {
              this.onSearchSubmit()
+             this.onSearchSubmitTwo()
              this.setState({ showing: !showing });
            }}
          >
@@ -75,7 +120,7 @@ class AideSearch extends React.Component {
 
         <section className="Posts" stackable>
         {showing ? null : people}
-
+        {images}
         </section>
 
 

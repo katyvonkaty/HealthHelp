@@ -12,8 +12,8 @@ const ContainerText = () => (
     <Grid verticalAlign="middle" columns={1} centered>
       <Grid.Column>
         <Container text>
-          <Header centered style={{ fontSize: "56px" }}>
-            Hi, We Want to Disrupt the Home Health Care Industry.
+          <Header centered style={{ fontSize: "56px", textAlign:"center",color:"#002375" }}>
+            Welcome to the Magnetic Resonance Imaging.
           </Header>
           <p>
             Why should finding reliable and quality home health aides be such a
