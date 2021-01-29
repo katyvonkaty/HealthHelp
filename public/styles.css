@@ -7,8 +7,34 @@ h1, h2, h3, h4, h5 {
 
 }
 
+.mapContainer {
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+}
+
+.mapboxgl-map {
+height:80vh !important;
+width:100% !important;
+}
+
 h1,h2 {
   color:#002375 !important;
+}
+
+.sidebarStyle {
+display: inline-block !important;
+position: relative !important;
+top: 60px !important;
+left: 0;
+margin: 12px;
+background-color: #404040;
+color: #ffffff;
+z-index: 100000000 !important;
+padding: 6px;
+font-weight: bold;
 }
 
 
