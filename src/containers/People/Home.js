@@ -6,7 +6,7 @@ import ContainerText from "./ContainerText";
 import SecondContainer from "./SecondContainer";
 // import {map} from "./Map";
 import AideSearch from "./AideSearch";
-import Map from "./Map";
+import Maps from "./Map";
 
 const Home = (props) => (
   <>
@@ -14,7 +14,7 @@ const Home = (props) => (
     <ContainerText />
     <SecondContainer />
     <AideSearch />
-    <Map />
+    <Maps />
 
     <Contact />
 
