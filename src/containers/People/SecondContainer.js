@@ -25,9 +25,9 @@ class SecondContainer extends React.Component {
               <Grid.Column width={10} centered>
                 <h2> Searching for Health Care Efficiently </h2>
                 <p>
-                  {" "}
+                
 
-  	               The device benefits from three scientific breakthroughs. First, the shrinking of the size of pixels on display screens to almost the size of the wavelength of light. It can detect small changes in the body and beam them back at high resolution.{" "}
+                  	Now, the same technology is starting to be used in a number of commercial products. Because certain metamaterials can control electromagnetic waves, they can also be used to improve the performance of satellite antennas and sensors.
                 </p>
                 <Sticky context={this.contextRef} pushing >
                 <img src={product} style={{width:"100%"}} />

@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Button, Header, Grid } from "semantic-ui-react";
+import TypeWriterEffect from 'react-typewriter-effect';
+
 
 const ContainerText = () => (
   <Container
@@ -13,11 +15,19 @@ const ContainerText = () => (
       <Grid.Column>
         <Container text>
           <Header centered style={{ fontSize: "56px", textAlign:"center",color:"#002375" }}>
-            Welcome to the Magnetic Resonance Imaging.
+          <TypeWriterEffect
+           textStyle={{ fontFamily: 'Red Hat Display' }}
+           startDelay={100}
+           className="header"
+           textAlign="center"
+           cursorColor="black"
+           text="Invisibility cloak metamaterials make their way into products"
+           typeSpeed={100}
+         />
+
           </Header>
           <p>
-            Why should finding reliable and quality home health aides be such a
-            challenge? <br /> Sign up to learn more.
+          Wave-bending materials revamp satellite antennas and drones — as a start
           </p>
           <Grid.Column
             style={{ textAlign: "center", marginBottom: "190px" }}

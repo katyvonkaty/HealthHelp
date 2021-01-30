@@ -17,6 +17,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-scroll": "^1.8.1",
+    "react-typewriter-effect": "^1.0.2",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.1",
     "web-vitals": "^0.2.4"

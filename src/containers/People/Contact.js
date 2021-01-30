@@ -18,7 +18,7 @@ class Contact extends Component {
 
       <Container fluid id="contact" className="contactForm">
         <Form className="testing">
-          <h1 style={{ textAlign: "center" }}> Sign Up for Early Access</h1>
+          <h1 style={{ textAlign: "center", fontSize:"46px" }}> Sign Up for Early Access</h1>
 
           <Form.Group widths="equal">
             <Form.Input fluid label="First name" placeholder="First name" />

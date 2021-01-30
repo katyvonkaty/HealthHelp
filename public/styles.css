@@ -7,21 +7,8 @@ h1, h2, h3, h4, h5 {
 
 }
 
-/* .mapContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-
-.mapboxgl-map {
-  height:80vh !important;
-  width:100% !important;
-} */
-
 h1,h2 {
-  color:#002375 !important;
+  color:#000 !important;
 }
 
 .sidebarStyle {
@@ -46,12 +33,9 @@ h1,h2 {
 
 .ui.header {
   margin-top:90px !important;
-  color:002375 !important;
+  color:#000 !important;
 }
-.ui header {
-  margin-top:90px;
-    color:002375 !important;
-}
+
 
 .logo {
   width:90% !important;
@@ -60,11 +44,11 @@ h1,h2 {
 }
 
 .App {
-  background-color:#f3f6fb
+  background-color:#e0ede6
 }
 
 .ui.attached.menu:not(.tabular) {
-background-color: #f3f6fb;
+background-color: #fcfcfc;
 }
 
 h2 {
@@ -80,7 +64,7 @@ h2 {
 }
 
 button {
-  background-color: #ffdc00 !important;
+  background-color: #427abe !important;
   color: white !important;
 }
 
@@ -107,6 +91,15 @@ i.icon.medkit:before {
 .magic {
   height: 100%;
   padding: 100px;
+  background-color:#427abe;
+}
+
+.magic h2 {
+  color:white !important;
+}
+
+.magic h4 {
+  color:white !important;
 }
 
 .testing {
@@ -126,22 +119,19 @@ i.huge.icon {
   margin-top: -20px !important;
 }
 
+.react-typewriter-text {
+  font-size:56px !important;
+  text-align:center !important;
+}
 
 
 .ui.basic.blue.button {
   color: #5B7FCC !important;
 }
 
-.contactForm .ui.form .field>label, .inline .fields {
-  color: white !important;
-}
-
-.ui.checkbox input.hidden+label, .ui.form .inline.fields>label {
-  color: white !important;
-}
 
 #contact {
-  background-color: #314A3C
+  background-color: #e5e6f5
 }
 
 button a {

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Menu, Button, Sticky } from "semantic-ui-react";
 import { Link } from "react-scroll";
 import { Route } from "react-router-dom"
-import logo from "../../assets/images/logo.png"
+import logo from "../../assets/images/logo.jpg"
 import Profile from "./Profile"
 // const ScrollLink = Scroll.ScrollLink
 
