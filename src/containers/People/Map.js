@@ -49,13 +49,9 @@
 // export default Map;
 import * as React from 'react';
 import ReactMapGL, {Popup} from 'react-map-gl';
+const TOKEN = process.env.REACT_APP_API_KEY
 
-const TOKEN = 
 
-const geolocateControlStyle= {
-  right: 10,
-  top: 10
-};
 
 
 function Map() {
@@ -64,23 +60,25 @@ function Map() {
     latitude: 40.7557,
     zoom: 14
   });
-  const [showPopup, togglePopup] = React.useState(false);
+  const [showPopup, togglePopup] = React.useState({
+    showPopup:true
+});
 
   return (
     <ReactMapGL {...viewport}
         mapboxApiAccessToken={TOKEN}
         width="100vw" height="80vh"
-        onViewportChange={setViewport}
          >
       {showPopup && <Popup
           latitude={40.7557}
           longitude={-73.8831}
           closeButton={true}
-          closeOnClick={false}
-          onClose={() => togglePopup(false)}
+          closeOnClick={true}
+          onClick={() => this.setState({showPopup:false})}
           anchor="top" >
           <div>You are here</div>
         </Popup>}
+
     </ReactMapGL>
   );
 }

@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import { Menu, Button, Sticky } from "semantic-ui-react";
 import { Link } from "react-scroll";
-import { Route, Switch } from "react-router-dom"
-import AideSearch from "./AideSearch"
-import Profile from "./Profile"
+import { Route } from "react-router-dom"
 import logo from "../../assets/images/logo.png"
-import FullPerson from "./FullPerson"
+import Profile from "./Profile"
 // const ScrollLink = Scroll.ScrollLink
 
 export default class Navbar extends Component {

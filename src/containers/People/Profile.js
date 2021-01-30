@@ -1,12 +1,10 @@
 import React from "react";
-import Navbar from "./Navbar";
+import { Container, Button, Header, Grid } from "semantic-ui-react";
 
 const Profile = () => {
-  return(
-    <div>
-     <h1> Testing </h1>
-     </div>
-  )
-}
+return (
+  <h1> Hi </h1>
+)
+};
 
 export default Profile;
