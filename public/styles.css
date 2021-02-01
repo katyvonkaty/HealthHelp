@@ -11,6 +11,10 @@ h1,h2 {
   color:#000 !important;
 }
 
+.imgMarker {
+  width:10%;
+  border-radius:50%;
+}
 .sidebarStyle {
   display: inline-block !important;
   position: relative !important;

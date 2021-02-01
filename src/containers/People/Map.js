@@ -1,6 +1,6 @@
 
 import * as React from 'react';
-import ReactMapGL, {Popup, ScaleControl} from 'react-map-gl';
+import ReactMapGL, {Marker} from 'react-map-gl';
 
 
 const TOKEN = process.env.REACT_APP_API_KEY
@@ -18,7 +18,7 @@ function Map() {
     zoom: 14
 
   });
-  const [showPopup, togglePopup] = React.useState(true);
+
 
 
 
@@ -26,20 +26,31 @@ function Map() {
     <ReactMapGL {...viewport}
         mapboxApiAccessToken={TOKEN}
         width="100vw" height="80vh"
-        zoom={14}
+        zoom={12}
+        draggable={true}
         onViewportChange={setViewport}
         mapStyle="mapbox://styles/mapbox/light-v10"
          >
-         <ScaleControl maxWidth={100} unit="metric" style={scaleControlStyle} />
 
-      {showPopup && <Popup
-          latitude={40.7557}
-          longitude={-73.8831}
-          closeButton={true}
-          closeOnClick={true}
-          anchor="top" >
-          <div>You are here</div>
-        </Popup>}
+
+         <Marker
+           latitude={40.77850} longitude={-73.9228}
+           >
+           <img className="imgMarker" src='https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2020-12/king-cake-scones.jpg?itok=RsTpmMHZ'/>
+         </Marker>
+
+         <Marker
+           latitude={40.7769} longitude={-73.8740}
+           >
+           <img className="imgMarker" src='https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2020-12/king-cake-scones.jpg?itok=RsTpmMHZ'/>
+         </Marker>
+
+         <Marker
+           latitude={40.7455} longitude={-73.9587}
+           >
+           <img className="imgMarker" src='https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2020-12/king-cake-scones.jpg?itok=RsTpmMHZ'/>
+         </Marker>
+
 
     </ReactMapGL>
   );

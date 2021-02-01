@@ -6,17 +6,17 @@ import ContainerText from "./ContainerText";
 import SecondContainer from "./SecondContainer";
 // import {map} from "./Map";
 import AideSearch from "./AideSearch";
-import Maps from "./Map";
+// import MapBoxGL from "./MapBoxGL";
+import Map from "./Map";
+
 
 const Home = (props) => (
   <>
     <Navbar />
-    <ContainerText />
-    <SecondContainer />
-      <ContainerText />
-    <Maps />
     <AideSearch />
-    <Contact />
+    <ContainerText />
+    <SecondContainer/>
+<Map />
 
   </>
 );
