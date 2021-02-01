@@ -13,33 +13,24 @@ class AideSearch extends React.Component {
     images: []
   };
 
-  onSearchSubmit = async () => {
-    const response = await axios.get( '/users/' )
-    let people = response.data
-    people = people.slice(0,4)
-    const updatedPeople = people.map((person) => {
-      return {
-        ...person,
-      };
-    });
-    this.setState({ people: updatedPeople });
-    console.log(response.data);
-  };
 
-  onSearchSubmitTwo = async() => {
-    const response = await axios.get("https://api.generated.photos/api/v1/faces?api_key=vIlzn11TdFjRGqXAL1x0VA")
-    console.log(response.data.faces);
-    let images = response.data.faces
-    images = images.slice(0,4)
-    const updatedImages  = images.map( (image) => {
+
+
+  onSearchSubmit = async () => {
+  const response = await axios.get("https://api.imgflip.com/get_memes")
+
+    let people = response.data.data.memes
+    people = people.slice(0,4)
+    console.log(people)
+    const updatedPeople = people.map( (person) => {
       return {
-        ...image
+        ...person
       }
     })
-    this.setState({images: updatedImages})
-console.log(images);
-  }
+    this.setState({people: updatedPeople})
 
+
+  };
 
 
   personSelected = (id) => {
@@ -48,60 +39,36 @@ console.log(images);
   };
 
   render() {
+
+
     const { showing } = this.state;
     const people = this.state.people.map((person) => {
       return (
-        <p> {person.name} </p>
-      )
-      {this.state.images.map( (image) => {
-        return(
-          <div>
-          <p>  {image.id} </p>
-            </div>
-        )
-      })}
+        <div class="ui four column grid">
 
-    });
+    <div>
+              <div class="column">
+              <h4> {person.name} </h4>
+              <img src={person.url} />
+              </div>
 
-    // made some progress hitting both loops at the same time but still super confused
-
- //    const { showing } = this.state;
- // const people = this.state.people.map((person) => {
- //   return (
- //     <Link to={"/profile/" + person.id}>
- //       <Aide
- //         key={person.id}
- //         name={person.name}
- //         email={person.email}
- //         phone={person.phone}
- //         website={person.website}
- //
- //       />
- //     </Link>
- //   );
- // });
- //
+      </div>
+      </div>
 
 
-    const images = this.state.images.map ((image) => {
-      return (
-
-        <div>
-        <p> {image.id} </p>
-        <p> {image.meta.gender} </p>
-        </div>
       )
     })
+
+
+
+
 
     return (
       <div className="magic" id="magic">
         <h2> Get Home Health Help Today</h2>
         <h4 style={{ textAlign: "center" }}>
           {" "}
-
-
   	       Unfortunately for Harry Potter fans, however, they say a portable cloak that makes moving objects invisible to the human eye remains improbable. A metamaterial cloaking device needs a certain thickness in order to effectively bend the light travelling through it, according to Prof Pendry.
-
         </h4>
 
         <Button
@@ -111,7 +78,6 @@ console.log(images);
            style={{ display: "block", margin: "0 auto" }}
            onClick={() => {
              this.onSearchSubmit()
-             this.onSearchSubmitTwo()
              this.setState({ showing: !showing });
            }}
          >
@@ -121,8 +87,7 @@ console.log(images);
 
 
         <section className="Posts" stackable>
-        {showing ? null : people}
-        {images}
+        {showing ? null : people }
         </section>
 
 

@@ -13,9 +13,9 @@ const Home = (props) => (
     <Navbar />
     <ContainerText />
     <SecondContainer />
-    <AideSearch />
+      <ContainerText />
     <Maps />
-
+    <AideSearch />
     <Contact />
 
   </>

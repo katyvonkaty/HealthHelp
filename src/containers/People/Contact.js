@@ -16,6 +16,7 @@ class Contact extends Component {
     const { value } = this.state;
     return (
 
+
       <Container fluid id="contact" className="contactForm">
         <Form className="testing">
           <h1 style={{ textAlign: "center", fontSize:"46px" }}> Sign Up for Early Access</h1>
@@ -60,6 +61,8 @@ class Contact extends Component {
           </Form.Button>
         </Form>
       </Container>
+
+
     );
   }
 }
