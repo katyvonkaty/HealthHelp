@@ -6,17 +6,20 @@ import ContainerText from "./ContainerText";
 import SecondContainer from "./SecondContainer";
 // import {map} from "./Map";
 import AideSearch from "./AideSearch";
-// import MapBoxGL from "./MapBoxGL";
+import MapView from "./MapView";
 import Map from "./Map";
 
 
 const Home = (props) => (
   <>
     <Navbar />
-    <AideSearch />
     <ContainerText />
+    <AideSearch />
+
     <SecondContainer/>
 <Map />
+<MapView />
+<Contact />
 
   </>
 );
