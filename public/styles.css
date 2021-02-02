@@ -33,6 +33,13 @@ h1,h2 {
   height:0;
 }
 
+.centered {
+  text-align: center;
+  background-color:white;
+  padding-bottom:30px;
+}
+
+
 .marker  span {
   display:flex;
   justify-content:center;

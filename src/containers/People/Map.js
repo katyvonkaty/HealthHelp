@@ -1,14 +1,10 @@
 
 import * as React from 'react';
-import ReactMapGL, {Marker, Popup} from 'react-map-gl';
+import ReactMapGL, {Marker} from 'react-map-gl';
 
 
 const TOKEN = process.env.REACT_APP_API_KEY
 
-const scaleControlStyle= {
-  left: 20,
-  bottom: 100
-};
 
 
 

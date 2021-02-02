@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import { Container, Button, Item,Image, Icon, Label } from "semantic-ui-react";
+import { Container, Button, Item,Image, Label } from "semantic-ui-react";
 
 const Aide = (props) => (
   <Container text>

@@ -1,7 +1,8 @@
 import React, { PureComponent } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
-import { Container, Col, Row, Item, Button } from "reactstrap";
+import { Container, Col, Row } from "reactstrap";
 import Geocoder from "react-mapbox-gl-geocoder";
+import { Icon, Input, Button } from 'semantic-ui-react'
 
 const mapStyle = {
   width: "100%",
@@ -111,25 +112,27 @@ class MapView extends PureComponent {
     const { viewport, tempMarker, markers, selectedIndex } = this.state;
     return (
       <Container fluid={true}>
-        <Row>
-          <Col>
-            <h2>Mapbox Tutorial</h2>
-          </Col>
-        </Row>
-        <Row className="py-8">
+
+        <Row className="py-8 centered">
           <p> Search to see </p>
           <Col xs={8}>
+        <Input>
             <Geocoder
               mapboxApiAccessToken={mapboxApiKey}
               onSelected={this.onSelected}
               viewport={viewport}
               hideOnSelect={true}
               value=""
-              queryParams={params}
-            />
-            <Button color="primary" onClick={this.add}>
-              Add
-            </Button>
+              className="ui input"
+              queryParams={params}>
+              <Icon name='users' />
+              </Geocoder>
+              <Button color="primary" onClick={this.add}>
+                Add <Icon disabled name='search' />
+              </Button>
+              </Input>
+
+
           </Col>
         </Row>
         <Row>

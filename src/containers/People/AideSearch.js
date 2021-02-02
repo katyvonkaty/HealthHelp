@@ -1,9 +1,5 @@
 import React from "react";
-import FullPerson from "./FullPerson";
-import Aide from "./Aide";
-
 import axios from "axios";
-import { Route, Link } from "react-router-dom";
 import { Button } from "semantic-ui-react";
 
 class AideSearch extends React.Component {

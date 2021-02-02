@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Button, Header, Grid } from "semantic-ui-react";
 
 const Profile = () => {
 return (
