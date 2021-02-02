@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import ReactMapGL, { Marker, Popup, NavigationControl } from "react-map-gl";
 import { Container, Col, Row } from "reactstrap";
 import Geocoder from "react-mapbox-gl-geocoder";
 import { Icon, Input, Button } from 'semantic-ui-react'
@@ -18,7 +18,10 @@ const params = {
 };
 
 
-
+const navControlStyle= {
+  right: 10,
+  top: 10
+};
 
 const CustomPopup = ({index, marker, closePopup, remove}) => {
   return (
@@ -59,7 +62,7 @@ class MapView extends PureComponent {
       viewport: {
         latitude: 40.7557,
         longitude: -73.8831,
-        zoom: 15,
+        zoom: 10,
       },
       tempMarker:null,
       markers:[],
@@ -111,12 +114,15 @@ class MapView extends PureComponent {
   render() {
     const { viewport, tempMarker, markers, selectedIndex } = this.state;
     return (
-      <Container fluid={true}>
+      <Container fluid={true} >
 
-        <Row className="py-8 centered">
-          <p> Search to see </p>
-          <Col xs={8}>
-        <Input>
+        <Row className="py-8 texting">
+        <h1 className="bigHeader"> Is Invisibility in Your Area? </h1>
+          <h3> Search Invisibility</h3>
+          <p> Where would you like to add invisiblity?</p>
+
+          <Col sm={6}>
+        <Input type="text" placeholder='Search...'>
             <Geocoder
               mapboxApiAccessToken={mapboxApiKey}
               onSelected={this.onSelected}
@@ -127,13 +133,13 @@ class MapView extends PureComponent {
               queryParams={params}>
               <Icon name='users' />
               </Geocoder>
-              <Button color="primary" onClick={this.add}>
-                Add <Icon disabled name='search' />
-              </Button>
               </Input>
 
-
           </Col>
+          <Button color="primary" onClick={this.add}>
+            Add <Icon disabled name='search' />
+          </Button>
+
         </Row>
         <Row>
           <Col>
@@ -151,6 +157,9 @@ class MapView extends PureComponent {
               </div>
             </Marker>
             <Marker
+            index={1}
+              openPopup={this.openPopup}
+              marker = {1}
               latitude={40.7557} longitude={-73.8740}>
               <div className="marker" >
                 <span><b>{2}</b></span>
@@ -185,6 +194,8 @@ class MapView extends PureComponent {
              remove={this.remove}
             />
         }
+        <NavigationControl style={navControlStyle} />
+
             </ReactMapGL>
           </Col>
         </Row>

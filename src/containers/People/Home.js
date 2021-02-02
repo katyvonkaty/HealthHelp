@@ -8,17 +8,13 @@ import SecondContainer from "./SecondContainer";
 import AideSearch from "./AideSearch";
 import MapView from "./MapView";
 
-
 const Home = (props) => (
   <>
     <Navbar />
     <ContainerText />
-    <AideSearch />
-
-    <SecondContainer/>
-<MapView />
-<Contact />
-
+    <SecondContainer /> <AideSearch />
+    <MapView />
+    <Contact />
   </>
 );
 

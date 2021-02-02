@@ -33,9 +33,9 @@ h1,h2 {
   height:0;
 }
 
-.centered {
+.texting {
   text-align: center;
-  background-color:white;
+  background-color:white !important;
   padding-bottom:30px;
 }
 
@@ -73,6 +73,11 @@ h1,h2 {
 .ui.header {
   margin-top:90px !important;
   color:#000 !important;
+}
+
+.bigHeader {
+  font-size:40px;
+  padding:50px;
 }
 
 
@@ -200,6 +205,11 @@ button a {
 @media (max-width:760px) {
   .header {
     margin-top: 10px !important;
+  }
+
+  .logo {
+    padding: 0 !important;
+    width:30% !important
   }
 
   .ui.basic.blue.button, .user .circle .huge .icon {
