@@ -45,7 +45,7 @@ class AideSearch extends React.Component {
     <div>
               <div class="column">
               <h4> {person.name} </h4>
-              <img src={person.url} />
+              <img alt="person" src={person.url} />
               </div>
 
       </div>

@@ -25,12 +25,12 @@ class SecondContainer extends React.Component {
               <Grid.Column width={10} centered>
                 <h2> Searching for Health Care Efficiently </h2>
                 <p>
-                
+
 
                   	Now, the same technology is starting to be used in a number of commercial products. Because certain metamaterials can control electromagnetic waves, they can also be used to improve the performance of satellite antennas and sensors.
                 </p>
                 <Sticky context={this.contextRef} pushing >
-                <img src={product} style={{width:"100%"}} />
+                <img alt="productshot" src={product} style={{width:"100%"}} />
                 </Sticky>
               </Grid.Column>
             </Grid.Row>
