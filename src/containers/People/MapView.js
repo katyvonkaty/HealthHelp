@@ -17,7 +17,6 @@ const params = {
   country: "us",
 };
 
-
 const navControlStyle= {
   right: 10,
   top: 10
