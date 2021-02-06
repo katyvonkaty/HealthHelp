@@ -21,7 +21,7 @@ const ContainerText = () => (
            className="header"
            textAlign="center"
            cursorColor="black"
-           text="Is freedom of speech a necessity?"
+           text="Is Freedom Of Speech A Necessity?"
            typeSpeed={100}
          />
 

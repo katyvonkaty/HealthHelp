@@ -116,7 +116,7 @@ class MapView extends PureComponent {
       <Container fluid={true} >
 
         <Row className="py-8 texting">
-        <h1 className="bigHeader"> Are You Sick of People Speakimg Their Mind? </h1>
+        <h1 className="bigHeader"> Are You Sick of People Speaking Their Mind? </h1>
           <h3> Search the Map to Avoid Freedom of Speech Havens</h3>
           <p> If you're area is not on the map - add your address below and our people will contact you.</p>
 
@@ -134,11 +134,11 @@ class MapView extends PureComponent {
               </Geocoder>
               </Input>
 
-          </Col>
+
           <Button color="primary" onClick={this.add}>
             Add <Icon disabled name='search' />
           </Button>
-
+  </Col>
         </Row>
         <Row>
           <Col>

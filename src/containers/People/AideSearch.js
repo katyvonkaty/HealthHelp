@@ -39,17 +39,17 @@ class AideSearch extends React.Component {
           <div class="content">
             <i class="user circle icon"></i>
 
-            <a class="header">{person.name}</a>
+            <span class="header">{person.name}</span>
             <div class="meta">
               <span class="date">{person.email}</span>
             </div>
             <div class="description">{person.website} </div>
           </div>
           <div class="extra content">
-            <a>
+            <span>
               <i class="user icon"></i>
               {person.phone}
-            </a>
+            </span>
           </div>
         </div>
       );
