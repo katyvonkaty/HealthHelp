@@ -23,12 +23,11 @@ class SecondContainer extends React.Component {
             <Grid.Row>
               <Grid.Column width={3}></Grid.Column>
               <Grid.Column width={10} centered>
-                <h2> Searching for Health Care Efficiently </h2>
+                <h2> Freedom of Speech Is Outdated </h2>
                 <p>
 
 
-                  	Now, the same technology is starting to be used in a number of commercial products. Because certain metamaterials can control electromagnetic waves, they can also be used to improve the performance of satellite antennas and sensors.
-                </p>
+Censors seek to limit freedom of thought and expression by restricting spoken words, printed matter, symbolic messages, freedom of association, books, art, music, movies, television programs, and Internet sites. When the government engages in censorship, First Amendment freedoms are implicated.                </p>
                 <Sticky context={this.contextRef} pushing >
                 <img alt="productshot" src={product} style={{width:"100%"}} />
                 </Sticky>

@@ -116,9 +116,9 @@ class MapView extends PureComponent {
       <Container fluid={true} >
 
         <Row className="py-8 texting">
-        <h1 className="bigHeader"> Is Invisibility in Your Area? </h1>
-          <h3> Search Invisibility</h3>
-          <p> Where would you like to add invisiblity?</p>
+        <h1 className="bigHeader"> Are You Sick of People Speakimg Their Mind? </h1>
+          <h3> Search the Map to Avoid Freedom of Speech Havens</h3>
+          <p> If you're area is not on the map - add your address below and our people will contact you.</p>
 
           <Col sm={6}>
         <Input type="text" placeholder='Search...'>
@@ -162,6 +162,34 @@ class MapView extends PureComponent {
               latitude={40.7557} longitude={-73.8740}>
               <div className="marker" >
                 <span><b>{2}</b></span>
+              </div>
+            </Marker>
+            <Marker
+            index={1}
+              openPopup={this.openPopup}
+              marker = {1}
+              latitude={40.7557} longitude={-73.8140}>
+              <div className="marker" >
+                <span><b>{3}</b></span>
+              </div>
+            </Marker>
+            <Marker
+            index={1}
+              openPopup={this.openPopup}
+              marker = {1}
+              latitude={40.7557} longitude={-73.8040}>
+              <div className="marker" >
+                <span><b>{4}</b></span>
+              </div>
+            </Marker>
+
+            <Marker
+            index={1}
+              openPopup={this.openPopup}
+              marker = {1}
+              latitude={40.7557} longitude={-73.2040}>
+              <div className="marker" >
+                <span><b>{5}</b></span>
               </div>
             </Marker>
             { tempMarker &&

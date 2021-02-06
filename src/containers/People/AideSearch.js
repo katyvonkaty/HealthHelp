@@ -6,94 +6,89 @@ class AideSearch extends React.Component {
   state = {
     people: [],
     showing: true,
-    images: []
+    images: [],
   };
-
-
-
 
   onSearchSubmit = async () => {
-  const response = await axios.get("https://api.imgflip.com/get_memes")
+    const response = await axios.get(
+      "https://jsonplaceholder.typicode.com/users"
+    );
 
-    let people = response.data.data.memes
-    people = people.slice(0,4)
-    console.log(people)
-    const updatedPeople = people.map( (person) => {
+    let people = response.data;
+    console.log(response.data);
+    people = people.slice(0, 4);
+    console.log(people);
+    const updatedPeople = people.map((person) => {
       return {
-        ...person
-      }
-    })
-    this.setState({people: updatedPeople})
-
-
+        ...person,
+      };
+    });
+    this.setState({ people: updatedPeople });
   };
-
 
   personSelected = (id) => {
     console.log(this.id);
-    this.props.history.push({pathname: '/' + id});
+    this.props.history.push({ pathname: "/" + id });
   };
 
   render() {
-
-
     const { showing } = this.state;
     const people = this.state.people.map((person) => {
       return (
-        <div class="ui four column grid">
+        <div class="ui card">
+          <div class="content">
+            <i class="user circle icon"></i>
 
-    <div>
-              <div class="column">
-              <h4> {person.name} </h4>
-              <img alt="person" src={person.url} />
-              </div>
-
-      </div>
-      </div>
-
-
-      )
-    })
-
-
-
-
+            <a class="header">{person.name}</a>
+            <div class="meta">
+              <span class="date">{person.email}</span>
+            </div>
+            <div class="description">{person.website} </div>
+          </div>
+          <div class="extra content">
+            <a>
+              <i class="user icon"></i>
+              {person.phone}
+            </a>
+          </div>
+        </div>
+      );
+    });
 
     return (
       <div className="magic" id="magic">
-        <h2> Get Home Health Help Today</h2>
+        <h2> Eliminate Unwanted Opinions</h2>
         <h4 style={{ textAlign: "center" }}>
           {" "}
-  	       Unfortunately for Harry Potter fans, however, they say a portable cloak that makes moving objects invisible to the human eye remains improbable. A metamaterial cloaking device needs a certain thickness in order to effectively bend the light travelling through it, according to Prof Pendry.
+          Why should you're crazy liberal neighbor get to express his thoughts
+          without his tounge getting cut out. Click here for a list of the most
+          opinionated people in your area.{" "}
         </h4>
 
         <Button
-           primary
-           massive
-           className="buttonSearch"
-           style={{ display: "block", margin: "0 auto" }}
-           onClick={() => {
-             this.onSearchSubmit()
-             this.setState({ showing: !showing });
-           }}
-         >
-           {" "}
-           Check Providers in Your Area
-         </Button>
+          primary
+          inverted
+          massive
+          className="buttonSearch"
+          style={{ display: "block", margin: "0 auto" }}
+          onClick={() => {
+            this.onSearchSubmit();
+            this.setState({ showing: !showing });
+          }}
+        >
+          {" "}
+          Check Providers in Your Area
+        </Button>
 
-
-        <section className="Posts" stackable>
-        {showing ? null : people }
+        <section className="Posts four wide column" stackable>
+          {showing ? null : people}
         </section>
-
-
       </div>
     );
   }
 }
 
 export default AideSearch;
-
 
 // import React from "react";
 // import FullPerson from "./FullPerson";
@@ -181,7 +176,6 @@ export default AideSearch;
 // }
 //
 // export default AideSearch;
-
 
 // componentDidMount() {
 //   console.log(this.props);

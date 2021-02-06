@@ -21,14 +21,13 @@ const ContainerText = () => (
            className="header"
            textAlign="center"
            cursorColor="black"
-           text="Invisibility cloak metamaterials make their way into products"
+           text="Is freedom of speech a necessity?"
            typeSpeed={100}
          />
 
           </Header>
           <p>
-          Wave-bending materials revamp satellite antennas and drones — as a start
-          </p>
+Freedom of speech is a principle that supports the freedom of an individual or a community to articulate their opinions and ideas without fear of retaliation, censorship, or legal sanction. <strong>Yawn</strong>          </p>
           <Grid.Column
             style={{ textAlign: "center", marginBottom: "190px" }}
             className="bottom"
