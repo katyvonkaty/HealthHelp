@@ -1,0 +1,239 @@
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Fira Sans', sans-serif !important;
+
+}
+
+.ui.card {
+    margin: 1em 0 !important;
+    display: inline-block !important;
+    margin-left: 50px !important;
+  }
+
+h1,h2 {
+  color:#000 !important;
+}
+
+.imgMarker {
+  width:10%;
+  border-radius:50%;
+}
+.sidebarStyle {
+  display: inline-block !important;
+  position: relative !important;
+  top: 60px !important;
+  left: 0;
+  margin: 12px;
+  background-color: #404040;
+  color: #ffffff;
+  z-index: 100000000 !important;
+  padding: 6px;
+  font-weight: bold;
+}
+
+.marker {
+  width:0;
+  height:0;
+}
+
+.texting {
+  text-align: center;
+  background-color:white !important;
+  padding-bottom:30px;
+}
+
+
+.marker  span {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-sizing:border-box;
+  width: 30px;
+  height: 30px;
+  color:#fff;
+  background: #4D2D73;
+  border:solid 2px;
+  border-radius: 0 70% 70%;
+  box-shadow:0 0 2px #000;
+  cursor: pointer;
+  transform-origin:0 0;
+  transform: rotateZ(-135deg);
+}
+
+.marker b {
+  transform: rotateZ(135deg)
+}
+
+.temporary-marker span {
+  background: #D3D3D3;
+}
+
+h4 {
+  font-size:18px !important;
+}
+
+.ui.items>.item>.content {
+  padding: 10px !important;
+  border-bottom: 1px solid #eee;
+}
+
+.ui.header {
+  margin-top:90px !important;
+  color:#000 !important;
+}
+
+.bigHeader {
+  font-size:40px;
+  padding:50px;
+}
+
+
+.logo {
+  width:60% !important;
+  margin-right:20px;
+  padding:20px;
+}
+
+.App {
+  background-color:#e0ede6
+}
+
+.ui.attached.menu:not(.tabular) {
+background-color: white;
+}
+
+h2 {
+  font-size:46px !important;
+  text-align:center;
+  margin-top:30px !important;
+}
+
+.header p {
+  text-align: center;
+  color: #666;
+  font-weight: 400;
+}
+
+button {
+  background-color: #427abe !important;
+  color: white !important;
+}
+
+i.icon.medkit:before {
+  color: #E6BF46 !important;
+}
+
+.secondContainer {
+  background-color: #fff;
+  height: 100%;
+  padding: 10px;
+}
+
+.secondContainer h1 {
+  margin-top: 40px !important;
+  font-weight: 600;
+}
+
+.contactForm {
+  padding: 60px;
+  color: white;
+}
+
+.magic {
+  height: 100%;
+  padding: 100px;
+  background-color:#427abe;
+}
+
+.magic h2 {
+  color:white !important;
+}
+
+.magic h4 {
+  color:white !important;
+}
+
+.testing {
+  width: 80% !important;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 30px;
+  height: 100%;
+}
+
+i.huge.icon {
+  margin-top: 110px !important;
+  color: #314A3C;
+}
+
+.ui.basic.blue.button, .user .circle .huge .icon {
+  margin-top: -20px !important;
+}
+
+.react-typewriter-text {
+  font-size:56px !important;
+  text-align:center !important;
+}
+
+
+.ui.basic.blue.button {
+  color: #5B7FCC !important;
+}
+
+
+#contact {
+  background-color: #e5e6f5
+}
+
+button a {
+  color: white !important;
+}
+
+.ui.menu .item a {
+  color: black;
+}
+
+#magic img {
+  height: auto;
+  width: 30%;
+  margin-right: 30px;
+  padding: 20px;
+
+}
+
+#magic .header {
+  margin-top:30px;
+}
+
+.secondContainer img {
+  padding: 40px;
+}
+
+@media (max-width:760px) {
+  .header {
+    margin-top: 10px !important;
+  }
+
+  .logo {
+    padding: 0 !important;
+    width:15% !important
+  }
+
+  .ui.basic.blue.button, .user .circle .huge .icon {
+    margin-top: -10px !important;
+    float: left !important;
+  }
+
+  i.huge.icon {
+    margin-top: 10px !important;
+  }
+
+  .testing {
+    width: 100% !important;
+  }
+
+  .
+}
