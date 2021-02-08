@@ -35,7 +35,7 @@ class AideSearch extends React.Component {
     const { showing } = this.state;
     const people = this.state.people.map((person) => {
       return (
-        <div class="ui card">
+        <div class="ui card" >
           <div class="content">
             <i class="user circle icon"></i>
 
@@ -67,20 +67,20 @@ class AideSearch extends React.Component {
 
         <Button
           primary
-          inverted
+
           massive
           className="buttonSearch"
-          style={{ display: "block", margin: "0 auto" }}
+          style={{ display: "block", margin: "0 auto", border:"2px solid white" }}
           onClick={() => {
             this.onSearchSubmit();
             this.setState({ showing: !showing });
           }}
         >
           {" "}
-          Check Providers in Your Area
+          Check Outspoken People in Your Area
         </Button>
 
-        <section className="Posts four wide column" stackable>
+        <section className="Posts " stackable>
           {showing ? null : people}
         </section>
       </div>

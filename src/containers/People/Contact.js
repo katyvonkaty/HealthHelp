@@ -31,27 +31,7 @@ class Contact extends Component {
               placeholder="Gender"
             />
           </Form.Group>
-          <Form.Group inline>
-            <label>Role</label>
-            <Form.Radio
-              label="Caregiver"
-              value="sm"
-              checked={value === "sm"}
-              onChange={this.handleChange}
-            />
-            <Form.Radio
-              label="Child"
-              value="md"
-              checked={value === "md"}
-              onChange={this.handleChange}
-            />
-            <Form.Radio
-              label="Spouse"
-              value="lg"
-              checked={value === "lg"}
-              onChange={this.handleChange}
-            />
-          </Form.Group>
+          
           <Form.TextArea
             label="About"
             placeholder="Tell us more about you..."

@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Contact from "./Contact";
 import ContainerText from "./ContainerText";
+import TableExamplePadded from "./Table";
 
 import SecondContainer from "./SecondContainer";
 // import {map} from "./Map";
@@ -12,7 +13,10 @@ const Home = (props) => (
   <>
     <Navbar />
     <ContainerText />
-    <SecondContainer /> <AideSearch />
+
+    <SecondContainer />
+      <TableExamplePadded />
+       <AideSearch />
     <MapView />
     <Contact />
   </>

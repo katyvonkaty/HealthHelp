@@ -28,9 +28,7 @@ class SecondContainer extends React.Component {
 
 
 Censors seek to limit freedom of thought and expression by restricting spoken words, printed matter, symbolic messages, freedom of association, books, art, music, movies, television programs, and Internet sites. When the government engages in censorship, First Amendment freedoms are implicated.                </p>
-                <Sticky context={this.contextRef} pushing >
-                <img alt="productshot" src={product} style={{width:"100%"}} />
-                </Sticky>
+            
               </Grid.Column>
             </Grid.Row>
               </Ref>
