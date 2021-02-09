@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/HealthHelp/static/js/main.81cb4480.chunk.js",
-    "main.js.map": "/HealthHelp/static/js/main.81cb4480.chunk.js.map",
-    "runtime-main.js": "/HealthHelp/static/js/runtime-main.bfba61be.js",
-    "runtime-main.js.map": "/HealthHelp/static/js/runtime-main.bfba61be.js.map",
-    "static/js/2.e23736ad.chunk.js": "/HealthHelp/static/js/2.e23736ad.chunk.js",
-    "static/js/2.e23736ad.chunk.js.map": "/HealthHelp/static/js/2.e23736ad.chunk.js.map",
-    "index.html": "/HealthHelp/index.html",
-    "static/js/2.e23736ad.chunk.js.LICENSE.txt": "/HealthHelp/static/js/2.e23736ad.chunk.js.LICENSE.txt",
-    "static/media/logo.32ff6888.jpg": "/HealthHelp/static/media/logo.32ff6888.jpg",
-    "static/media/product.58f47bdc.png": "/HealthHelp/static/media/product.58f47bdc.png"
+    "main.js": "/healthhelp/static/js/main.81cb4480.chunk.js",
+    "main.js.map": "/healthhelp/static/js/main.81cb4480.chunk.js.map",
+    "runtime-main.js": "/healthhelp/static/js/runtime-main.5a9296ca.js",
+    "runtime-main.js.map": "/healthhelp/static/js/runtime-main.5a9296ca.js.map",
+    "static/js/2.813a1e8e.chunk.js": "/healthhelp/static/js/2.813a1e8e.chunk.js",
+    "static/js/2.813a1e8e.chunk.js.map": "/healthhelp/static/js/2.813a1e8e.chunk.js.map",
+    "index.html": "/healthhelp/index.html",
+    "static/js/2.813a1e8e.chunk.js.LICENSE.txt": "/healthhelp/static/js/2.813a1e8e.chunk.js.LICENSE.txt",
+    "static/media/logo.32ff6888.jpg": "/healthhelp/static/media/logo.32ff6888.jpg",
+    "static/media/product.58f47bdc.png": "/healthhelp/static/media/product.58f47bdc.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.bfba61be.js",
-    "static/js/2.e23736ad.chunk.js",
+    "static/js/runtime-main.5a9296ca.js",
+    "static/js/2.813a1e8e.chunk.js",
     "static/js/main.81cb4480.chunk.js"
   ]
 }
