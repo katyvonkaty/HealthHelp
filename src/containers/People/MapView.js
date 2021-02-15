@@ -9,6 +9,8 @@ const mapStyle = {
   height: 600,
 };
 
+// const TOKEN = process.env.NEXT_PUBLIC_API_KEY;
+
 const TOKEN = process.env.REACT_APP_API_KEY;
 //
 // const TOKEN = "pk.eyJ1Ijoia2F0aWVpbnRlbGxpZ2VudCIsImEiOiJja2tpaGRoYWQwM3R1MnFxYTYyemx0Ym1lIn0.acG14rBKgjYuCUTi4r46qA"
@@ -145,7 +147,7 @@ class MapView extends PureComponent {
           <Col>
             <ReactMapGL
               mapboxApiAccessToken={mapboxApiKey}
-              mapStyle="mapbox://styles/mapbox/light-v10"
+              mapStyle="mapbox://styles/mapbox/light-v9"
               {...viewport}
               {...mapStyle}
               onViewportChange={(viewport) => this.setState({ viewport })}
